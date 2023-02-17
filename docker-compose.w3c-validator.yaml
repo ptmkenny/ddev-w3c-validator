@@ -1,12 +1,16 @@
 #ddev-generated
 services:
+
   w3c-validator:
     image: ghcr.io/validator/validator:latest
-    container_name: ddev-${DDEV_SITENAME}-addon-template
-    command: tail -f /dev/null
-    networks: [default, ddev_default]
-    restart: "no"
-    # These labels ensure this service is discoverable by ddev.
+    # No support for ARM yet.
+    # Feature request: https://github.com/validator/validator/issues/1545
+    platform: linux/amd64
+    container_name: ddev-${DDEV_SITENAME}-w3c-validator
+    external_links:
+      - ddev-router:${DDEV_SITENAME}.${DDEV_TLD}
+    ports:
+      - "8888:8888"
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: $DDEV_APPROOT
