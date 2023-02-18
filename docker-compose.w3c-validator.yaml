@@ -2,18 +2,21 @@
 services:
 
   w3c-validator:
-    image: ghcr.io/validator/validator:latest
-    # No support for ARM yet.
-    # Feature request: https://github.com/validator/validator/issues/1545
-    platform: linux/amd64
     container_name: ddev-${DDEV_SITENAME}-w3c-validator
+    environment:
+      - VIRTUAL_HOST=$DDEV_HOSTNAME
+      - HTTP_EXPOSE=8888:8888
+      - HTTPS_EXPOSE=8887:8888
+    expose:
+      - 8888
     external_links:
       - ddev-router:${DDEV_SITENAME}.${DDEV_TLD}
-    ports:
-      - "8888:8888"
+    image: ghcr.io/validator/validator:latest
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: $DDEV_APPROOT
-
+    # No support for ARM yet.
+    # Feature request: https://github.com/validator/validator/issues/1545
+    platform: linux/amd64
     volumes:
     - ".:/mnt/ddev_config"
