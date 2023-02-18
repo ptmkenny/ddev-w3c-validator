@@ -1,4 +1,4 @@
-[![tests](https://github.com/drud/ddev-w3c-validator/actions/workflows/tests.yml/badge.svg)](https://github.com/drud/ddev-w3c-validator/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2023.svg)
+[![tests](https://github.com/ptmkenny/ddev-w3c-validator/actions/workflows/tests.yml/badge.svg)](https://github.com/ptmkenny/ddev-w3c-validator/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2023.svg)
 
 # ddev-w3c-validator
 
