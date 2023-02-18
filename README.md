@@ -17,8 +17,6 @@ It can be used to evaluate whether your HTML and CSS meets the W3C specification
 
 ## If you are on Apple Silicon/ARM
 
-The scan will be really, really slow. For example, on a site of about 50 pages, it takes about 20 minutes to do the scan. This is because the Docker image does not support ARM.
-
-If you want to speed this up, please give a [thumbs up to my feature request in the upstream repo](https://github.com/validator/validator/issues/1545).
+The scan will be slow. If you want to speed this up, please give a [thumbs up to my feature request in the upstream repo](https://github.com/validator/validator/issues/1545).
 
 **Contributed and maintained by [@ptmkenny](https://github.com/ptmkenny) based on the original [ddev-contrib recipe](https://github.com/ddev/ddev-contrib/tree/master/docker-compose-services/RECIPE).**
