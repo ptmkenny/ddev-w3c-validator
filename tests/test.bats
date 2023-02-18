@@ -32,8 +32,8 @@ teardown() {
 @test "install from release" {
   set -eu -o pipefail
   cd ${TESTDIR} || ( printf "unable to cd to ${TESTDIR}\n" && exit 1 )
-  echo "# ddev get ddev/ddev-w3c-validator with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
-  ddev get ddev/ddev-w3c-validator
+  echo "# ddev get ptmkenny/ddev-w3c-validator with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  ddev get ptmkenny/ddev-w3c-validator
   ddev restart >/dev/null
   # Do something useful here that verifies the add-on
   ddev exec "curl -s w3c-validator:8888" | grep "Nu Html Checker"
