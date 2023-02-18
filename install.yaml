@@ -1,4 +1,4 @@
-name: addon-template
+name: w3c-validator
 pre_install_actions:
 project_files:
 - docker-compose.w3c-validator.yaml
