@@ -8,6 +8,10 @@ This repository provides the Nu Validator service for [DDEV](https://ddev.readth
 
 It can be used to evaluate whether your HTML and CSS meets the W3C specifications.
 
+## Basic use
+
+After installing the addon, you can access the **Nu Html Checker** at `http://example.ddev.site:8888`.
+
 ## Use with Drupal
 
 1. Enable the [W3C Validator](https://www.drupal.org/project/w3c_validator) module on your Drupal site.
